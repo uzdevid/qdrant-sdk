@@ -4,6 +4,7 @@ namespace UzDevid\Qdrant\Module\Collection;
 
 use UzDevid\Qdrant\Exception\ClientErrorExceptionInterface;
 use UzDevid\Qdrant\Exception\NotFoundExceptionInterface;
+use UzDevid\Qdrant\Exception\QdrantException;
 use UzDevid\Qdrant\Exception\ServiceErrorExceptionInterface;
 use UzDevid\Qdrant\Module\Collection\Input\Vector;
 use UzDevid\Qdrant\Module\Collection\Output\CollectionData;
@@ -12,6 +13,7 @@ interface CollectionInterface {
     /**
      * @param string $name
      * @return CollectionData
+     * @throws QdrantException
      * @throws NotFoundExceptionInterface
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
@@ -22,6 +24,7 @@ interface CollectionInterface {
      * @param string $name
      * @param Vector $vector
      * @return bool
+     * @throws QdrantException
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
      */
@@ -30,6 +33,7 @@ interface CollectionInterface {
     /**
      * @param string $name
      * @return bool
+     * @throws QdrantException
      * @throws NotFoundExceptionInterface
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
@@ -39,6 +43,7 @@ interface CollectionInterface {
     /**
      * @param string $name
      * @return bool
+     * @throws QdrantException
      * @throws NotFoundExceptionInterface
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
@@ -47,6 +52,7 @@ interface CollectionInterface {
 
     /**
      * @return CollectionData[]
+     * @throws QdrantException
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
      */
@@ -55,6 +61,7 @@ interface CollectionInterface {
     /**
      * @param string $name
      * @return bool
+     * @throws QdrantException
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
      */
