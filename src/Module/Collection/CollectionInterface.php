@@ -42,13 +42,14 @@ interface CollectionInterface {
 
     /**
      * @param string $name
+     * @param Vector $vector
      * @return bool
      * @throws QdrantException
      * @throws NotFoundExceptionInterface
      * @throws ServiceErrorExceptionInterface
      * @throws ClientErrorExceptionInterface
      */
-    public function update(string $name): bool;
+    public function update(string $name, Vector $vector): bool;
 
     /**
      * @return CollectionData[]
