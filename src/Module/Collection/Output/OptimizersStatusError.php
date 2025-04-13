@@ -5,8 +5,8 @@ namespace UzDevid\Qdrant\Module\Collection\Output;
 use Yiisoft\Arrays\ArrayableInterface;
 use Yiisoft\Arrays\ArrayableTrait;
 
-class CollectionData implements ArrayableInterface {
+class OptimizersStatusError implements ArrayableInterface {
     use ArrayableTrait;
-    
-    public string $name;
+
+    public string $error;
 }
