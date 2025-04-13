@@ -1,9 +1,13 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace UzDevid\Qdrant\Module\Collection\Input;
 
-class HnswConfigDiff {
+use Yiisoft\Arrays\ArrayableInterface;
+use Yiisoft\Arrays\ArrayableTrait;
+
+class HnswConfigDiff implements ArrayableInterface {
+    use ArrayableTrait;
+
     public int $m;
     public int $efConstruct;
     public int $fullScanThreshold;
